@@ -22,6 +22,10 @@ body {
     background-color: var(--bg-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* **** header ****/
 
 .container {
@@ -483,7 +487,7 @@ nav ul li:after {
 }
 
 .portfolio-box img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .portfolio-container {
@@ -537,7 +541,7 @@ nav ul li:after {
     flex-direction: column;
     padding: 0 4rem;
     transform: translateX(-100%);
-    transition: 0.5s ease;
+    transition: 0.8s ease;
 }
 
 .portfolio-box:hover .portfolio-layer {
@@ -565,5 +569,228 @@ nav ul li:after {
     .portfolio-layer a {
         width: 1.5rem;
         height: 1.5rem;
+    }
+}
+
+/* ----- Services ----- */
+
+.service-container {
+    background-color: var(--bg-light-color);
+    padding: 7rem 50px;
+}
+
+.service-container h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.service-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 30px;
+}
+
+.service {
+    padding: 25px;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.5s;
+    background: var(--text-color);
+}
+
+.service img {
+    width: 80px;
+}
+
+.service h3 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service:hover {
+    background: var(--extra-light-color);
+    transform: scale(1.1);
+}
+
+.service:nth-child(2),
+.service:nth-child(5) {
+    background: var(--extra-light-color);
+}
+
+.service:nth-child(2):hover,
+.service:nth-child(5):hover {
+    background: var(--text-color);
+}
+
+/* ----- Responsive Service section ---- */
+
+@media (max-width:500px) {
+    .service-container {
+        padding: 7rem 45px
+    }
+
+    .service-row {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .service {
+        text-align: center;
+    }
+
+    .service img {
+        width: 50px;
+    }
+}
+    
+/* ----- contact ---- */
+
+.contact-form-container {
+    text-align: center;
+    padding: 0rem 260px 7rem;
+}
+
+.contact-form-container h1 {
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    width: 70%;
+    height: 3.2rem;
+    margin-bottom: 14px;
+    padding-top: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: var(--text-color);
+    border: 2px solid var(--para-color);
+    border-radius: 2px;
+    background: var(--bg-light-color);
+    transition: all 0.3s;
+}
+
+input[type="submit"] {
+    width: 70%;
+    padding: 10px 15px;
+    background: var(--main-color);
+    box-shadow: 0 0 12px var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+input[type="submit"]:hover{
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+
+/* ----- Responsive Contact section ---- */
+
+@media (max-width:900px) {
+    .contact-form-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* ----- Footer ----- */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-light-color);
+    padding: 25px 40px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.footer p a {
+    color: var(--para-color);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: 40px;
+    left: 50%;
+    transform: translate(-53%, -50%);
+}
+
+.socials li {
+    margin: 0 10px; 
+}
+ 
+.socials a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.socials a i{
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #585858;
+    color: var(--text-color);
+    padding: .5rem;
+    text-align: center;
+    transition: all o.3s ease-in-out;
+    left: 50%;
+}
+
+.socials a i:hover {
+    background-color: var(--main-color);
+    transform: scale(1.1);
+
+}
+
+.footer-menu ul {
+    display: flex;
+}
+
+.footer-menu ul li {
+    padding-right: 10px;
+    list-style: none;
+}
+
+.footer-menu ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-menu ul li a:hover {
+    color: var(--light-color);
+}
+
+/* ----- Responsive footer ----- */
+
+        
+@media (max-width:900px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .socials {
+        margin-top: 60px;
+    }
+
+    .footer-menu{
+        margin-top: 70px;
     }
 }
