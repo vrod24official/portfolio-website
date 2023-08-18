@@ -266,17 +266,17 @@ nav ul li:after {
         text-align: center;
     }
 
-    .her-text h2 {
+    .hero-text h2 {
         font-size: 1rem;
         font-weight: 500;
     }
 
-    .her-text h1 {
+    .hero-text h1 {
         font-size: 2.4rem;
         font-weight: 700;
     }
 
-    .her-text h2 {
+    .hero-text p {
         font-size: .9rem;
     }
 
@@ -304,7 +304,7 @@ nav ul li:after {
         position: absolute;
         top: 70px;
         left: 0;
-        background-color: var(--text-color);
+        background-color: var(--bg-light-color);
         width: 100%;
         z-index: 1;
         overflow: hidden;
@@ -318,8 +318,14 @@ nav ul li:after {
         padding: 0;
     }
 
+    nav ul li:hover:after {
+        width: 20%;
+        left: 40%;
+        right: 0
+    }
+
     nav ul li a {
-        color: var(--bg-color);
+        color: var(--text-color);
     }
 
     .hero .hero-image img {
@@ -697,8 +703,8 @@ input[type="submit"]:hover{
 
 @media (max-width:900px) {
     .contact-form-container {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 
@@ -709,7 +715,7 @@ input[type="submit"]:hover{
     justify-content: space-between;
     align-items: center;
     background: var(--bg-light-color);
-    padding: 25px 40px;
+    padding: 25px 15px;
 }
 
 .footer p {
@@ -764,7 +770,7 @@ input[type="submit"]:hover{
 }
 
 .footer-menu ul li {
-    padding-right: 20px;
+    padding-right: 10px;
     list-style: none;
 }
 
@@ -792,5 +798,6 @@ input[type="submit"]:hover{
 
     .footer-menu{
         margin-top: 70px;
+        align-items: center;
     }
 }
