@@ -730,7 +730,7 @@ input[type="submit"]:hover{
     position: absolute;
     margin-top: 40px;
     left: 50%;
-    transform: translate(-53%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .socials li {
