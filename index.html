@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awsome link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+    <!--  ******* Header ******* -->
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">VRod</div>
+
+            <nav class="rightnav">
+                <ul class="nav-links" id="menuItems">
+                    <li> <a href="#">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#portfolio">Protfolio</a></li>
+                    <li> <a href="#services">Services</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!---- Close & open  button ----->
+
+            <div class="menu-icon" onclick="menuToggle()">
+                <img class="hamburger-img" src="images/hamburger.png" alt="open" width="25px">
+                <img class="cross-img" src="images/cross.png" alt="close" width="25px">
+            </div>
+        </div>
+
+        <!------ Hero Section ------>
+
+        <div class="hero">
+            <div class="content">
+                <div class="hero-main">
+                    <div class="hero-text">
+                        <h2>Hello, I am Jenelyn Omongos</h2>
+                        <h1>Web Developer, Desginer, Data Analyst</h1>
+
+                        <p>I am a Data and Reporting Analyst who enjoys helping businesses grow and succeed
+                            with data analytics and advance reporting</p>
+
+                        <div class="buttons">
+                            <button class="btn1">Download CV</button>
+                            <button class="btn2">Contact Me</button>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <img src="images/jen.jpg" alt="woman image">
+                </div>
+            </div>
+
+            <div class="skills">
+                <p>Tech Skills</p>
+                <div class="logos">
+                    <ul>
+                        <li><img src="images/html.png" alt="html"></li>
+                        <li><img src="images/css-3.png" alt="css"></li>
+                        <li><img src="images/js-file.png" alt="js"></li>
+                        <li><img src="images/python.png" alt="python"></li>
+                        <li><img src="images/sql.png" alt="SQL"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!----- About ----->
+
+    <div class="about" id="about">
+        <div class="about-img">
+            <img src="images/jen.jpg" alt="about-image">
+        </div>
+
+        <div>
+            <div class="about-content">
+                <h2 class="heading">About Me</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, possimus unde, doloribus
+                     earum quos molestiae exercitationem dolorum fuga iusto expedita suscipit sunt modi 
+                     perspiciatis 
+                    esse voluptatum iure nobis. Eligendi, numquam?</p>
+            </div>
+
+            <div class="skill-container">
+                <div class="skills1">
+                    <div class="skill">
+                        <div class="skill-name">HTML</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90%" style="max-width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills1">
+                    <div class="skill">
+                        <div class="skill-name">CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="70%" style="max-width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills1">
+                    <div class="skill">
+                        <div class="skill-name">Javascript</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="60%" style="max-width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills1">
+                    <div class="skill">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="80%" style="max-width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!----- Portfolio Section ----->
+
+    <div class="portfolio" id="portfolio">
+        <h2 class="heading">Portfolio</h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/project1.jpg" alt="project1">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/project2.jpg" alt="project2">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/project3.jpg" alt="project3">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/project4.jpg" alt="project4">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/project5.jpg" alt="project5">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/project6.jpg" alt="project6">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <!----- Java script ----->
+
+    <script>
+        var MenuItems = document.getElementById("menuItems");
+        var hamburgerimg = document.querySelector(".hamburger-img");
+        var crossimg = document.querySelector(".cross-img");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menuToggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+                hamburgerimg.style.display = "none";
+                crossimg.style.display = "inline-block"
+            } else {
+                MenuItems.style.maxHeight = "0px";
+                hamburgerimg.style.display = "inline-block";
+                crossimg.style.display = "none"
+            }
+        }
+    </script> 
+</body>
+
+</Html>
+
