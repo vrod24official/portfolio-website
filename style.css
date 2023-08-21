@@ -712,30 +712,33 @@ input[type="submit"]:hover{
 /* ----- Music ----- */
 
 .musicbox {
-    padding: 2rem 260px 15rem;
+    background-color: var(--bg-light-color);
+    padding: 2rem 70px 15rem;
+    margin-bottom: 50px;
 }
 
 .musicbox h1 {
-    padding: 0 0 48px;
+    padding: 0 0 49px;
     text-align: center;
+    
 }
 
 .music {
-    width: 100%;
-    height: 190px;
+    width: 69rem;
+    height: 80px;
     padding: 10px;
     background: #fff;
     border-radius: 8px;
     display: flex;
-    align-items: top;
+    align-items: center;
     text-align: left;
+    
 }
 
 .music img {
     width: 50px;
     height: 50px;
-    margin-left: 7px;
-    margin-top: 7px;
+    margin-left: 7px;   
 }  
 
 .music-info h2  {
@@ -753,26 +756,25 @@ input[type="submit"]:hover{
 
 .track  {
     display: flex;
-    margin-top: 68px;
     margin-left: 10px;
 }
 
 .track img {
-    margin-left: -190px;
-    margin-top: -2px;
+    margin-top: 4px;
+    width: 40px;
+    height: 40px;
 }
 
 .track  div {
     flex: 1;
     margin-top: 1px;
-    margin-left: 5px;
-    margin-right: 0;
-    width: 580px;
+    margin-left: 4px;
+    width: 665px;
 } 
 
 .time-full {
-    margin-top: 80px;
-    margin-left: 16px;
+    margin-top: 1px;
+    margin-left: 4px;
     font-size: 18;
     font-weight: bold;
     color: gray;
@@ -789,7 +791,15 @@ input[type="submit"]:hover{
     font-size: 14px;
     font-weight: 600;
     float: right;
-    
+    margin-left: 20px;
+}
+
+.download button:hover {
+    color: var(--light-color);
+}
+
+.download button:active {
+    opacity: .8;
 }
 
 
@@ -813,12 +823,13 @@ input[type="submit"]:hover{
     justify-content: space-between;
     align-items: center;
     background: var(--bg-light-color);
-    padding: 25px 15px;
+    padding: 25px 20px;
 }
 
 .footer p {
     font-size: 14px;
     color: var(--text-color);
+    margin-left: 10px;
 }
 
 .footer p a {
