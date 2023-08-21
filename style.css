@@ -708,6 +708,104 @@ input[type="submit"]:hover{
     }
 }
 
+
+/* ----- Music ----- */
+
+.musicbox {
+    padding: 2rem 260px 15rem;
+}
+
+.musicbox h1 {
+    padding: 0 0 48px;
+    text-align: center;
+}
+
+.music {
+    width: 100%;
+    height: 190px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: top;
+    text-align: left;
+}
+
+.music img {
+    width: 50px;
+    height: 50px;
+    margin-left: 7px;
+    margin-top: 7px;
+}  
+
+.music-info h2  {
+    font-size: 100%;
+    color: var(--bg-color);
+    margin-top: 4px;
+    margin-left: 11px;
+}
+
+.music-info p {
+    font-size: 80%;
+    margin-top: 7px;
+    margin-left: 11px;
+}
+
+.track  {
+    display: flex;
+    margin-top: 68px;
+    margin-left: 10px;
+}
+
+.track img {
+    margin-left: -190px;
+    margin-top: -2px;
+}
+
+.track  div {
+    flex: 1;
+    margin-top: 1px;
+    margin-left: 5px;
+    margin-right: 0;
+    width: 580px;
+} 
+
+.time-full {
+    margin-top: 80px;
+    margin-left: 16px;
+    font-size: 18;
+    font-weight: bold;
+    color: gray;
+}
+
+.download button {
+    width: 100px;
+    height: 35px;
+    background: #121212;
+    color: #fff;
+    padding: 2px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    float: right;
+    
+}
+
+
+/* ----- Responsive music ----- */
+
+@media  (max-width:900px) {
+    .musicbox {
+       padding-left: 0;
+       padding-right: 0;
+    }   
+
+    .music-info h2 {
+        padding-left: 0;
+    }
+}
+
 /* ----- Footer ----- */
 
 .footer {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
 
     <!-- font awsome link -->
 
@@ -262,6 +263,27 @@
         </form>
     </div>
 
+    <!----- Music ----->
+
+    <div class="musicbox">
+        <h1 class="heading">Free Music</h1>
+        <div class="music">
+
+            <img src="images/Ambient.jpg" alt="Purrple Cat">
+            <div class="music-info">
+                <h2>Crescent Moon</h2>
+                <p>Purrple Cat</p>
+            </div>
+                
+            <div class="track">
+                <img src="images/play.png" alt="play button" id="playBtn">
+                <div id="waveform"></div>
+            </div>
+                <div class="time-full">02:23</div>   
+        </div>
+        
+    </div>
+    
 
     <!----- Footer ----->
 
@@ -331,6 +353,40 @@
             }
         }
     </script> 
+
+    <!------ Music JS ------>
+
+
+    <script>
+        var playBtn = document.getElementById("playBtn");
+        var wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: '#d1d1d1',
+            progressColor: 'gray',
+            barWidth: 2,
+            responsive: true,
+            height: 45,
+            barRadius: 6
+        });
+
+        wavesurfer.load('media/Crescent-Moon.mp3');
+
+        playBtn.onclick = function(){
+            wavesurfer.playPause();
+            if(playBtn.src.includes("play.png")){
+                playBtn.src = "images/pause.png";
+            }else{
+                playBtn.src = "images/play.png";
+            }
+        }
+
+            wavesurfer.on('finish', function(){
+                playBtn.src = "images/play.png";
+                wavesurfer.stop();
+        })
+
+    </script>
+
 </body>
 
 </Html>
