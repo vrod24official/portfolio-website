@@ -948,7 +948,7 @@ input[type="submit"]:hover{
     }   
 
     .music {
-        width: 24rem;
+        width: auto;
         height: 250px;
         flex-direction: column;
         align-items: center;
@@ -977,7 +977,7 @@ input[type="submit"]:hover{
     .track div {
         margin-left: 0;
         margin-right: 0;
-        width: 333px;
+        width: 250px;
     }
 
     .time-full {
@@ -993,7 +993,7 @@ input[type="submit"]:hover{
     }   
 
     .music {
-        width: 17.7rem;
+        width: auto;
         height: 250px;
         flex-direction: column;
         align-items: center;
