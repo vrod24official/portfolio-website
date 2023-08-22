@@ -718,7 +718,7 @@ input[type="submit"]:hover{
 
 .musicbox {
     background-color: var(--bg-light-color);
-    padding: 2rem 70px 15rem;
+    padding: 32px 70px 100px;
     margin-bottom: 50px;
     border-radius: 10px;
 }
@@ -819,6 +819,7 @@ input[type="submit"]:hover{
 .download button:active {
     opacity: .8;
 }
+
 
 
 /* ----- Responsive music ----- */
@@ -988,8 +989,8 @@ input[type="submit"]:hover{
 
 @media (max-width:390px){
     .musicbox {
-       padding-left: 5px;
-       padding-right: 5px;   
+       padding-left: 10px;
+       padding-right: 10px;   
     }   
 
     .music {
