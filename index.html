@@ -343,6 +343,31 @@
             </div>   
         </div>
         
+        <div class="music">
+            <a href="https://www.chosic.com/download-audio/27977/">
+            <img src="images/Piano.jpg" alt="Calum Scott"></a>
+            <div class="music-info">
+                <div class="trackF-title-inside">
+                    <a href="https://www.chosic.com/download-audio/27977/">One Love</a>
+                </div>
+                <div class="artist-track">
+                    <a class="artist-name" href="https://www.chosic.com/free-music/all/?keyword=Keys%20of%20Moon&artist">Keys of Moon</a>
+                </div>
+            </div>
+                
+            <div class="track">
+                <img src="images/play.png" alt="play button" id="playBtn4">
+                <div id="waveform4"></div>
+            </div>
+                <div class="time-full">02:45</div>   
+            <div class="download">
+                <a href="https://www.chosic.com/download-audio/27977/" target="blank">
+                    <button class="button"><span></span>Download</button>
+                </a>
+                    
+            </div>   
+        </div>
+
     </div>
     
 
@@ -509,6 +534,36 @@
         });
 
     </script>
+
+    <script>
+
+        var playBtn4 = document.getElementById("playBtn4");
+        var wavesurfer4 = WaveSurfer.create({
+            container: '#waveform4',
+            waveColor: '#d1d1d1',
+            progressColor: 'gray',
+            barWidth: 3,
+            responsive: true,
+            height: 45,
+            barRadius: 5,
+            barGap: 2
+        });
+
+        wavesurfer4.load('media/One-Love.mp3');
+
+        playBtn4.onclick = function(){
+            wavesurfer4.playPause();
+            if(playBtn4.src.includes("play.png")){
+                playBtn4.src = "images/pause.png";
+            }else{
+                playBtn4.src = "images/play.png";
+            }};
+            wavesurfer4.on('finish', function(){
+                playBtn4.src = "images/play.png";
+                wavesurfer4.stop();
+        });
+
+</script>
     
 
 </body>
