@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/wavesurfer.js@7"></script>
 
+
     <!-- font awsome link -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -267,12 +268,17 @@
 
     <div class="musicbox">
         <h1 class="heading">Free Music</h1>
+        
         <div class="music">
-
-            <img src="images/Ambient.jpg" alt="Purrple Cat">
+            <a href="https://www.chosic.com/download-audio/29959/">
+                <img src="images/Ambient.jpg" alt="Ambient"></a>
             <div class="music-info">
-                <h2>Crescent Moon</h2>
-                <p>Purrple Cat</p>
+                <div class="trackF-title-inside">
+                    <a href="https://www.chosic.com/download-audio/29959/">Crescent Moon</a>
+                </div>
+                <div class="artist-track">
+                    <a class="artist-name" href="https://www.chosic.com/free-music/all/?keyword=Purrple Cat&artist">Purrple Cat</a>
+                </div>
             </div>
                 
             <div class="track">
@@ -282,6 +288,56 @@
                 <div class="time-full">02:23</div>   
             <div class="download">
                 <a href="https://www.chosic.com/download-audio/29959/" target="blank">
+                    <button class="button"><span></span>Download</button>
+                </a>
+            </div>   
+        </div>
+        
+
+        <div class="music">
+            <a href="https://www.chosic.com/download-audio/45373/">
+                <img src="images/Aesthetic.jpg" alt="Aesthetic"></a>
+            <div class="music-info">
+                <div class="trackF-title-inside">
+                    <a href="https://www.chosic.com/download-audio/45373/">Sleepless</a>
+                </div>
+                <div class="artist-track">
+                    <a class="artist-name" href="https://www.chosic.com/free-music/all/?keyword=Purrple Cat&artist">Purrple Cat</a>
+                </div>
+            </div>
+                
+            <div class="track">
+                <img src="images/play.png" alt="play button" id="playBtn2">
+                <div id="waveform2"></div>
+            </div>
+                <div class="time-full">02:59</div>   
+            <div class="download">
+                <a href="https://www.chosic.com/download-audio/45373/" target="blank">
+                    <button class="button"><span></span>Download</button>
+                </a>
+            </div>   
+        </div>
+
+
+        <div class="music">
+            <a href="https://www.youtube.com/watch?v=ShZ978fBl6Y">
+            <img src="images/Calum Scott.jpg" alt="Calum Scott"></a>
+            <div class="music-info">
+                <div class="trackF-title-inside">
+                    <a href="https://www.youtube.com/watch?v=ShZ978fBl6Y">You Are The Reason</a>
+                </div>
+                <div class="artist-track">
+                    <a class="artist-name" href="https://www.youtube.com/channel/UCTY6fxtqkF_dtGanIhZHHVg">Calum Scott</a>
+                </div>
+            </div>
+                
+            <div class="track">
+                <img src="images/play.png" alt="play button" id="playBtn3">
+                <div id="waveform3"></div>
+            </div>
+                <div class="time-full">02:59</div>   
+            <div class="download">
+                <a href="https://jesusful.com/calum-scott-you-are-the-reason-mp3-lyrics/#google_vignette" target="blank">
                     <button class="button"><span></span>Download</button>
                 </a>
             </div>   
@@ -363,15 +419,17 @@
 
 
     <script>
+
         var playBtn = document.getElementById("playBtn");
         var wavesurfer = WaveSurfer.create({
             container: '#waveform',
             waveColor: '#d1d1d1',
             progressColor: 'gray',
-            barWidth: 2,
+            barWidth: 3,
             responsive: true,
             height: 45,
-            barRadius: 6
+            barRadius: 5,
+            barGap: 2,
         });
 
         wavesurfer.load('media/Crescent-Moon.mp3');
@@ -382,15 +440,76 @@
                 playBtn.src = "images/pause.png";
             }else{
                 playBtn.src = "images/play.png";
-            }
-        }
-
+            }};
             wavesurfer.on('finish', function(){
                 playBtn.src = "images/play.png";
                 wavesurfer.stop();
-        })
+        });
 
     </script>
+
+
+    <script>
+
+        var playBtn2 = document.getElementById("playBtn2");
+        var wavesurfer2 = WaveSurfer.create({
+            container: '#waveform2',
+            waveColor: '#d1d1d1',
+            progressColor: 'gray',
+            barWidth: 3,
+            responsive: true,
+            height: 45,
+            barRadius: 5,
+            barGap: 2
+        });
+
+        wavesurfer2.load('media/Sleepless.mp3');
+
+        playBtn2.onclick = function(){
+            wavesurfer2.playPause();
+            if(playBtn2.src.includes("play.png")){
+                playBtn2.src = "images/pause.png";
+            }else{
+                playBtn2.src = "images/play.png";
+            }};
+            wavesurfer2.on('finish', function(){
+                playBtn2.src = "images/play.png";
+                wavesurfer2.stop();
+        });
+
+    </script>
+    
+
+    <script>
+
+        var playBtn3 = document.getElementById("playBtn3");
+        var wavesurfer3 = WaveSurfer.create({
+            container: '#waveform3',
+            waveColor: '#d1d1d1',
+            progressColor: 'gray',
+            barWidth: 3,
+            responsive: true,
+            height: 45,
+            barRadius: 5,
+            barGap: 2
+        });
+
+        wavesurfer3.load('media/You Are The Reason.mp3');
+
+        playBtn3.onclick = function(){
+            wavesurfer3.playPause();
+            if(playBtn3.src.includes("play.png")){
+                playBtn3.src = "images/pause.png";
+            }else{
+                playBtn3.src = "images/play.png";
+            }};
+            wavesurfer3.on('finish', function(){
+                playBtn3.src = "images/play.png";
+                wavesurfer3.stop();
+        });
+
+    </script>
+    
 
 </body>
 

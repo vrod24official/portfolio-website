@@ -385,6 +385,7 @@ nav ul li:after {
     gap: 3.2rem;
     padding: 7rem 15%;
     background-color: var(--bg-light-color);
+    border-radius: 10px;
 }
 
 .about .about-img img {
@@ -411,6 +412,7 @@ nav ul li:after {
 
 .about .skill-container {
     margin-top: 20px;
+
 }
 
 .about .skills1 {
@@ -554,6 +556,8 @@ nav ul li:after {
     transform: translateX(0);
 }
 
+/*----- Responsive portfolio ----- */
+
 @media (max-width:500px) {
     .portfolio-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -583,6 +587,7 @@ nav ul li:after {
 .service-container {
     background-color: var(--bg-light-color);
     padding: 7rem 50px;
+    border-radius: 10px;
 }
 
 .service-container h2 {
@@ -715,6 +720,7 @@ input[type="submit"]:hover{
     background-color: var(--bg-light-color);
     padding: 2rem 70px 15rem;
     margin-bottom: 50px;
+    border-radius: 10px;
 }
 
 .musicbox h1 {
@@ -724,37 +730,46 @@ input[type="submit"]:hover{
 }
 
 .music {
-    width: 69rem;
+    width: 69.4rem;
     height: 80px;
-    padding: 10px;
+    padding: 15px;
     background: #fff;
     border-radius: 8px;
     display: flex;
     align-items: center;
-    text-align: left;
-    
+    margin-bottom: 20px;
 }
 
 .music img {
+    margin-top: 7px;
     width: 50px;
-    height: 50px;
-    margin-left: 7px;   
-}  
+    height: 50px;   
+} 
 
-.music-info h2  {
-    font-size: 100%;
-    color: var(--bg-color);
+.music-info {
+    width: 1000px;
+}
+
+.music-info a {
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
     margin-top: 4px;
     margin-left: 11px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.music-info p {
+.music-info .artist-name {
     font-size: 80%;
-    margin-top: 7px;
+    margin-top: 6px;
     margin-left: 11px;
+    color: gray;
+    cursor: pointer;
+
 }
 
-.track  {
+.track {
     display: flex;
     margin-left: 10px;
 }
@@ -763,18 +778,19 @@ input[type="submit"]:hover{
     margin-top: 4px;
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 .track  div {
     flex: 1;
     margin-top: 1px;
     margin-left: 4px;
-    width: 665px;
+    width: 600px;
 } 
 
 .time-full {
     margin-top: 1px;
-    margin-left: 4px;
+    margin-left: 8px;
     font-size: 18;
     font-weight: bold;
     color: gray;
@@ -791,7 +807,9 @@ input[type="submit"]:hover{
     font-size: 14px;
     font-weight: 600;
     float: right;
-    margin-left: 20px;
+    margin-left: 19px;
+    margin-top: 2px;
+    cursor: pointer;
 }
 
 .download button:hover {
@@ -805,16 +823,146 @@ input[type="submit"]:hover{
 
 /* ----- Responsive music ----- */
 
-@media  (max-width:900px) {
+@media  (max-width:1371px) {
     .musicbox {
-       padding-left: 0;
-       padding-right: 0;
-    }   
-
-    .music-info h2 {
-        padding-left: 0;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .music {
+        width: 65.4rem;
+        height: 80px;
+        padding: 15px;
     }
 }
+
+@media  (max-width:1270px) {
+    .musicbox {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .music {
+        width: auto;
+        height: 80px;
+        padding: 15px;
+    }
+
+    .track div {
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
+}
+
+@media  (max-width:1180px) {
+    .musicbox {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .music {
+        width: auto;
+        height: 80px;
+        padding: 15px;
+    }
+
+    .track div {
+        margin-left: 0;
+        margin-right: 0;
+        width: 200px;
+    }
+}
+
+@media  (max-width:900px) {
+    .musicbox {
+       padding-left: 50px;
+       padding-right: 50px; 
+    }   
+
+    .music {
+        width: 44rem;
+        height: 242px;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .music-info {
+        text-align: center;
+    }
+
+    .music-info a {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .music-info .artist-name {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .download button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .track div {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .time-full {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+@media (max-width:500px){
+    .musicbox {
+       padding-left: 10px;
+       padding-right: 10px;   
+    }   
+
+    .music {
+        width: 24rem;
+        height: 250px;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .music-info {
+        text-align: center;
+    }
+
+    .music-info a {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .music-info .artist-name {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .download button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .track div {
+        margin-left: 0;
+        margin-right: 0;
+        width: 333px;
+    }
+
+    .time-full {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 
 /* ----- Footer ----- */
 
