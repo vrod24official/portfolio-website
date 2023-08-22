@@ -850,7 +850,7 @@ input[type="submit"]:hover{
     .track div {
         margin-left: 0;
         margin-right: 0;
-        width: 300px;
+        width: 500px;
     }
 }
 
@@ -869,18 +869,19 @@ input[type="submit"]:hover{
     .track div {
         margin-left: 0;
         margin-right: 0;
-        width: 200px;
+        width: 300px;
     }
 }
 
 @media  (max-width:900px) {
     .musicbox {
        padding-left: 50px;
-       padding-right: 50px; 
+       padding-right: 50px;
+       grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); 
     }   
 
     .music {
-        width: 44rem;
+        width: auto;
         height: 242px;
         flex-direction: column;
         align-items: center;
@@ -909,7 +910,7 @@ input[type="submit"]:hover{
     .track div {
         margin-left: 0;
         margin-right: 0;
-        width: 600px;
+        width: 400px;
     }
 
     .time-full {
@@ -926,7 +927,7 @@ input[type="submit"]:hover{
     }   
 
     .music {
-        width: 35.1rem;
+        width: auto;
         height: 242px;
         flex-direction: column;
         align-items: center;
@@ -936,7 +937,7 @@ input[type="submit"]:hover{
     .track div {
         margin-left: 0;
         margin-right: 0;
-        width: 500px;
+        width: 300px;
     }
 }
 
