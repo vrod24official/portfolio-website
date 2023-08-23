@@ -772,6 +772,7 @@ input[type="submit"]:hover{
 .track {
     display: flex;
     margin-left: 10px;
+    align-items: center;
 }
 
 .track img {
@@ -781,7 +782,7 @@ input[type="submit"]:hover{
     cursor: pointer;
 }
 
-.track  div {
+.track div {
     flex: 1;
     margin-top: 1px;
     margin-left: 4px;
@@ -843,6 +844,21 @@ input[type="submit"]:hover{
     visibility: visible
 }
 
+.play-loading {
+    display: none;
+    position: relative;
+    padding: 0;
+    color: #121212;
+    font-size: 35px;
+    border: none;
+    border-radius: 50%;
+    color: #121212;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
 
 
 /* ----- Responsive music ----- */

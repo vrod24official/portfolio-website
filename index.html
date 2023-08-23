@@ -284,6 +284,9 @@
             <div class="track">
                 <img src="images/play.png" alt="play button" id="playBtn">
                 <div id="waveform"></div>
+                <div class="play-loading">
+                    <i class="fas fa-circle-notch fa-spin"></i>
+                </div>
             </div>
                 <div class="time-full">02:23</div>   
             <div class="download" data-tooltip ="This track is free to use if you credit the artist">
@@ -345,7 +348,7 @@
         
         <div class="music">
             <a href="https://www.chosic.com/download-audio/27977/">
-            <img src="images/Piano.jpg" alt="Calum Scott"></a>
+            <img src="images/Piano.jpg" alt="Keys of Moon"></a>
             <div class="music-info">
                 <div class="trackF-title-inside">
                     <a href="https://www.chosic.com/download-audio/27977/">One Love</a>
@@ -362,6 +365,31 @@
                 <div class="time-full">02:45</div>   
             <div class="download" data-tooltip ="This track is free to use if you credit the artist">
                 <a href="https://www.chosic.com/download-audio/27977/" target="blank">
+                    <button class="button"><span></span>Download</button>
+                </a>
+
+            </div>   
+        </div>
+
+        <div class="music">
+            <a href="https://www.chosic.com/download-audio/30493/">
+            <img src="images/Relaxing.jpg" alt="Relaxing"></a>
+            <div class="music-info">
+                <div class="trackF-title-inside">
+                    <a href="https://www.chosic.com/download-audio/30493/">A Promise</a>
+                </div>
+                <div class="artist-track">
+                    <a class="artist-name" href="https://www.chosic.com/free-music/all/?keyword=Keys%20of%20Moon&artist">Keys of Moon</a>
+                </div>
+            </div>
+                
+            <div class="track">
+                <img src="images/play.png" alt="play button" id="playBtn5">
+                <div id="waveform5"></div>
+            </div>
+                <div class="time-full">02:44</div>   
+            <div class="download" data-tooltip ="This track is free to use if you credit the artist">
+                <a href="https://www.chosic.com/download-audio/30493/" target="blank">
                     <button class="button"><span></span>Download</button>
                 </a>
 
@@ -448,13 +476,22 @@
         var playBtn = document.getElementById("playBtn");
         var wavesurfer = WaveSurfer.create({
             container: '#waveform',
-            waveColor: '#d1d1d1',
-            progressColor: 'gray',
-            barWidth: 3,
-            responsive: true,
+            partialRender: true,
+            cursorWidth: 2,
             height: 45,
-            barRadius: 5,
+            progressColor: '#2f2e41',
+            responsive: true,
+            waveColor: '#a9a9a9',
+            barRadius: 2,
+            cursorColor: '#000',
+            barHeight: 3,
+            barMinHeight: 1,
+            hideScrollbar: true,
+            fillParent: true,
             barGap: 2,
+            barWidth: 3,
+            barRadius: 5,
+            normalize: true,
         });
 
         wavesurfer.load('media/Crescent-Moon.mp3');
@@ -479,13 +516,22 @@
         var playBtn2 = document.getElementById("playBtn2");
         var wavesurfer2 = WaveSurfer.create({
             container: '#waveform2',
-            waveColor: '#d1d1d1',
-            progressColor: 'gray',
-            barWidth: 3,
-            responsive: true,
+            partialRender: true,
+            cursorWidth: 2,
             height: 45,
+            progressColor: '#2f2e41',
+            responsive: true,
+            waveColor: '#a9a9a9',
+            barRadius: 2,
+            cursorColor: '#000',
+            barHeight: 3,
+            barMinHeight: 1,
+            hideScrollbar: true,
+            fillParent: true,
+            barGap: 2,
+            barWidth: 3,
             barRadius: 5,
-            barGap: 2
+            normalize: true,
         });
 
         wavesurfer2.load('media/Sleepless.mp3');
@@ -510,13 +556,22 @@
         var playBtn3 = document.getElementById("playBtn3");
         var wavesurfer3 = WaveSurfer.create({
             container: '#waveform3',
-            waveColor: '#d1d1d1',
-            progressColor: 'gray',
-            barWidth: 3,
-            responsive: true,
+            partialRender: true,
+            cursorWidth: 2,
             height: 45,
+            progressColor: '#2f2e41',
+            responsive: true,
+            waveColor: '#a9a9a9',
+            barRadius: 2,
+            cursorColor: '#000',
+            barHeight: 3,
+            barMinHeight: 1,
+            hideScrollbar: true,
+            fillParent: true,
+            barGap: 2,
+            barWidth: 3,
             barRadius: 5,
-            barGap: 2
+            normalize: true,
         });
 
         wavesurfer3.load('media/You Are The Reason.mp3');
@@ -540,13 +595,22 @@
         var playBtn4 = document.getElementById("playBtn4");
         var wavesurfer4 = WaveSurfer.create({
             container: '#waveform4',
-            waveColor: '#d1d1d1',
-            progressColor: 'gray',
-            barWidth: 3,
-            responsive: true,
+            partialRender: true,
+            cursorWidth: 2,
             height: 45,
+            progressColor: '#2f2e41',
+            responsive: true,
+            waveColor: '#a9a9a9',
+            barRadius: 2,
+            cursorColor: '#000',
+            barHeight: 3,
+            barMinHeight: 1,
+            hideScrollbar: true,
+            fillParent: true,
+            barGap: 2,
+            barWidth: 3,
             barRadius: 5,
-            barGap: 2
+            normalize: true,
         });
 
         wavesurfer4.load('media/One-Love.mp3');
@@ -563,7 +627,46 @@
                 wavesurfer4.stop();
         });
 
-</script>
+    </script>
+
+    <script>
+
+        var playBtn5 = document.getElementById("playBtn5");
+        var wavesurfer5 = WaveSurfer.create({
+            container: '#waveform5',
+            partialRender: true,
+            cursorWidth: 2,
+            height: 45,
+            progressColor: '#2f2e41',
+            responsive: true,
+            waveColor: '#a9a9a9',
+            barRadius: 2,
+            cursorColor: '#000',
+            barHeight: 3,
+            barMinHeight: 1,
+            hideScrollbar: true,
+            fillParent: true,
+            barGap: 2,
+            barWidth: 3,
+            barRadius: 5,
+            normalize: true,
+        });
+
+        wavesurfer5.load('media/a-promise.mp3');
+
+        playBtn5.onclick = function(){
+            wavesurfer5.playPause();
+            if(playBtn5.src.includes("play.png")){
+                playBtn5.src = "images/pause.png";
+            }else{
+                playBtn5.src = "images/play.png";
+            }};
+            wavesurfer5.on('finish', function(){
+                playBtn5.src = "images/play.png";
+                wavesurfer5.stop();
+        });
+
+    </script>
     
 
 </body>
